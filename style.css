@@ -1,3 +1,32 @@
+/*
+==================================================
+Copyright & Droits d’auteur
+
+© 2026 Y4nnxs. Tous droits réservés.
+
+L’ensemble du contenu présent sur ce site, incluant, de manière non limitative,
+les textes, graphismes, logos, icônes, images, animations, sons, vidéos, ainsi
+que le code source (HTML, CSS, JavaScript et tout autre langage utilisé),
+est la propriété exclusive de Y4nnxs, sauf mention contraire explicite.
+
+Toute reproduction, représentation, modification, adaptation, diffusion ou
+exploitation, totale ou partielle, du contenu de ce site, par quelque procédé
+que ce soit, sans l’autorisation écrite préalable de Y4nnxs, est strictement
+interdite et constitue une violation des dispositions du Code de la propriété
+intellectuelle et des lois internationales relatives au droit d’auteur.
+
+L’utilisation du contenu de ce site est autorisée uniquement à des fins
+personnelles et non commerciales, sauf autorisation expresse.
+
+Y4nnxs ne pourra être tenu responsable des dommages directs ou indirects
+pouvant résulter de l’accès ou de l’utilisation de ce site.
+
+==================================================
+*/
+
+
+
+
 /* ========================= */
 /* RESET GLOBAL              */
 /* ========================= */
@@ -65,7 +94,7 @@ p {
 
 a {
     color: #0070ba;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .gratuit {
@@ -102,7 +131,7 @@ a {
 }
 
 /* ========================= */
-/* BOUTONS STYLE btn-16      */
+/*         BOUTONS           */
 /* ========================= */
 .btn, .btn-command, .btn-menu {
     position: relative; /* nécessaire pour le pseudo-élément */
@@ -120,8 +149,30 @@ a {
     background-color: #004a6d;
 }
 
+.btn1 {
+    position: relative; /* nécessaire pour le pseudo-élément */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden; /* pour clip pseudo-élément */
+    transition: transform 0.2s, background-color 0.3s;
+    background-color: #004a6d;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 950px;
+    margin-top: 20px;
+    left: 450px;
+    size-adjust: auto;
+}
+
 /* Pseudo-élément pour l'effet btn-16 */
-.btn::after, .btn-command::after, .btn-menu::after {
+.btn::after, .btn-command::after, .btn-menu::after, .btn1::after {
     content: "";
     position: absolute;
     top: 0;
@@ -138,20 +189,20 @@ a {
 }
 
 /* Hover pseudo-element */
-.btn:hover::after, .btn-command:hover::after, .btn-menu:hover::after {
+.btn:hover::after, .btn-command:hover::after, .btn-menu:hover::after, .btn1:hover::after {
     left: auto;
     right: 0;
     width: 100%;
 }
 
 /* Hover bouton */
-.btn:hover, .btn-command:hover, .btn-menu:hover {
+.btn:hover, .btn-command:hover, .btn-menu:hover, .btn1:hover {
     transform: scale(1.05);
     background-color: #004080;
 }
 
 /* Active click */
-.btn:active, .btn-command:active, .btn-menu:active {
+.btn:active, .btn-command:active, .btn-menu:active, .btn1:active {
     top: 2px;
 }
 
@@ -236,7 +287,7 @@ a {
         font-size: 14px;
     }
     .btn-text {
-        font-size: 12px;
+        display: none;
     }
     .btn-icon {
         font-size: 20px;
@@ -261,7 +312,7 @@ a {
         gap: 0;
     }
     .btn-text {
-        display: none; /* cacher texte, garder que l'icône */
+        display: none; 
     }
     .sidebar-credits {
         display: none;
@@ -271,3 +322,4 @@ a {
         padding: 5px;
     }
 }
+
